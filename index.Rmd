@@ -1,26 +1,19 @@
 ---
-title: "My awesome website"
+title: "Hello!"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Vasuda's awesome website
+I am Vasuda Kapoor, an MPH candidate at Columbia University. 
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+I am passionate about utilizing novel biostatistical techniques to understand disease risk in cancer patients and improve their health outcomes in minority communities. 
 
-Here's some text. I like the internet. I use [google](https://www.google.com/) all the time to do data science. 
+![](images/headshot.jpg)
 
-This is my cat ted, who likes to be on the internet.
-![](images/ted_cat.jpeg)
 
-```{r}
-library(tidyverse)
+Here's a summary of my academic and professional experience:
+[resume](about.html).
 
-sample = rnorm(1000)
-mean(sample)
-```
 
-Here's a direct link to the about page:
-[about](about.html).
