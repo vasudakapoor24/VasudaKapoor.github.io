@@ -12,11 +12,6 @@ I am passionate about utilizing novel biostatistical techniques to understand di
 
 ![](images/headshot.jpg)
 
+I am interested in public health data science and have prior experience with coding in R, Python and SAS. My [Github](https://github.com/vasudakapoor24) account contains some of the projects I have worked on recently. 
 
-Here's a summary of my academic and professional experience:
-[resume](resume.html).
-
-Here's a link to my GitHub account: 
-[Github](https://github.com/vasudakapoor24)
-
-You can reach out to me via [email](vk2480@cumc.columbia.edu) or [LinkedIn](https://www.linkedin.com/in/vasuda-kapoor-4608461a5/). 
+You can also view my profile on  [LinkedIn](https://www.linkedin.com/in/vasuda-kapoor-4608461a5/). 

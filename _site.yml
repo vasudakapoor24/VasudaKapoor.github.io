@@ -3,12 +3,14 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
-      href: about.html
+    - text: "Professional Experience"
+      href: resume.html
+    - text: "Dashboard"
+      href: plots.html
     - icon: fa-envelope fa-lg
-      href: mailto:<vk2480@cumc.columbia.edu>
+      href: mailto:vk2480@cumc.columbia.edu
     - icon: fa-github fa-lg
-      href: http://github.com/<VasudaKapoor>/
+      href: http://github.com/vasudakapoor24/
 output:
   html_document:
     theme: cerulean

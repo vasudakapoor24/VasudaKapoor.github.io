@@ -1,0 +1,64 @@
+---
+title: "Dashboard"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r include= FALSE}
+# Load data and clean names
+data("rest_inspec")
+rest_inspec_df = rest_inspec %>%
+  sample_n(10000) %>%
+  janitor::clean_names()
+
+```
+
+Average score of Chinese restaurants in different boroughs of NYC. 
+```{r include= FALSE}
+# Plot 1
+# Median score of Chinese restaurants in different boroughs of NYC. 
+rest_inspec_df1 = rest_inspec_df %>%
+  filter(cuisine_description == "Chinese") %>%
+  plot_ly(y = ~score, x = ~boro, color = ~boro, type = "box", colors = "viridis") %>%
+  layout(xaxis = list(categoryorder = "total ascending"))
+```
+
+```{r warning=FALSE}
+rest_inspec_df1 
+```
+
+```{r}
+# Plot 2
+# Grade distribution by borough
+rest_inspec_df2 = rest_inspec_df %>%
+  group_by(boro) %>%
+  count(grade)
+
+plot2 = plot_ly(rest_inspec_df2, x = ~boro, y = ~n, type = 'bar', color = ~grade, colors = "viridis") %>% layout(yaxis = list(title = 'Count', range = c(0,2000)), xaxis = list(title = 'Borough'), barmode = 'stack') %>%
+  layout(xaxis = list(categoryorder = "total ascending"))
+plot2 
+```
+
+```{r}
+# Plot 3
+
+# Scatter-plot of all distinct restaurants plotted against their score, colored by grade
+
+plot3 = rest_inspec_df %>%
+  distinct(camis, .keep_all = TRUE) %>%
+  mutate(
+    text_rest = str_c( "Violation: ", violation_description)
+  ) %>%
+  plot_ly(y = ~score, x = ~grade, color = ~grade, colors = "viridis", type = "scatter", text = ~text_rest)
+plot3
+
+```
+
