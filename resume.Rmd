@@ -6,6 +6,7 @@ output:
     toc_float: true
 ---
 
-This is a summary of Vasuda Kapoor's academic and professional experience:
+Here is my current resume:
+![](resume.jpg)
 
 
